@@ -89,5 +89,15 @@ public class UserRegistration {
 	        Matcher matcher = pattern.matcher(password);
 	        return matcher.matches();
 	    }
-
+	  
+	  /*
+	   * method for some sample mails
+	   */
+	  
+	  public boolean emailAddressSample(String emailId) {
+	        String regex = "^[a-z0-9]{3,}+([_+-.][a-z0-9]{3,}+)*@[a-z0-9]+.[a-z]{2,3}+(.[a-z]{2,3}){0,1}$";
+	        Pattern pattern = Pattern.compile(regex);
+	        Matcher matcher = pattern.matcher(emailId);
+	        return matcher.matches();
+	    }
 }

@@ -85,26 +85,71 @@ public class UserRegistrationTest {
 	}
 	  @Test
 	    public void givenPasswordRule3_WhenInFormat_ShouldReturnTrue() {
-	        boolean result = userRegistration.passwordRule3("Rajendra22");
+	        boolean result = userRegistration.passwordRule3("Pratik22");
 	        Assert.assertEquals(true, result);
 	    }
 
 	    @Test
 	    public void givenPasswordRule3_WhenOurOfFormat_ShouldReturnFalse() {
-	        boolean result = userRegistration.passwordRule3("Rajendra");
+	        boolean result = userRegistration.passwordRule3("Pratik");
 	        Assert.assertEquals(false, result);
 	    }
 	    @Test
 	    public void givenPasswordRule4_WhenInFormat_ShouldReturnTrue() {
-	        boolean result = userRegistration.passwordRule4("Rajendra@22");
+	        boolean result = userRegistration.passwordRule4("Pratik@22");
 	        Assert.assertEquals(true, result);
 	    }
 
 	    @Test
 	    public void givenPasswordRule4_WhenOurOfFormat_ShouldReturnFalse() {
-	        boolean result = userRegistration.passwordRule4("Rajendra");
+	        boolean result = userRegistration.passwordRule4("Pratik");
 	        Assert.assertEquals(false, result);
 	    }
-	
+	    @Test
+	    public void givenEmail1_WhenInFormat_ShouldReturnTrue() {
+	        boolean result = userRegistration.emailAddressSample("abc1@yahoo.com");
+	        Assert.assertEquals(true, result);
+	    }
+
+	    @Test
+	    public void givenEmail1_WhenOurOfFormat_ShouldReturnFalse() {
+	        boolean result = userRegistration.emailAddressSample("abc@yahoo.com");
+	        Assert.assertEquals(false, result);
+	    }
+
+	    @Test
+	    public void givenEmail2WhenInFormat_ShouldReturnTrue() {
+	        boolean result = userRegistration.emailAddressSample("abc-100@yahoo.com");
+	        Assert.assertEquals(true, result);
+	    }
+
+	    @Test
+	    public void givenEmail2_WhenOurOfFormat_ShouldReturnFalse() {
+	        boolean result = userRegistration.emailAddressSample("abc123@.com");
+	        Assert.assertEquals(false, result);
+	    }
+	    @Test
+	    public void givenEmail3_WhenInFormat_ShouldReturnTrue() {
+	        boolean result = userRegistration.emailAddressSample("abc.100@abc.com.au");
+	        Assert.assertEquals(true, result);
+	    }
+
+	    @Test
+	    public void givenEmail3_WhenOurOfFormat_ShouldReturnFalse() {
+	        boolean result = userRegistration.emailAddressSample("abc()*@gmail.com");
+	        Assert.assertEquals(false, result);
+	    }
+
+	    @Test
+	    public void givenEmail4_WhenInFormat_ShouldReturnTrue() {
+	        boolean result = userRegistration.emailAddressSample("abc@1.com");
+	        Assert.assertEquals(true, result);
+	    }
+	    @Test
+	    public void givenEmail4_WhenOurOfFormat_ShouldReturnFalse() {
+	        boolean result = userRegistration.emailAddressSample("aabc.@gmail.com");
+	        Assert.assertEquals(false, result);
+	    }
+
 }
 
