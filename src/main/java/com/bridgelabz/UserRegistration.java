@@ -48,5 +48,15 @@ public class UserRegistration {
 	        Matcher matcher = pattern.matcher(phoneNumber);
 	        return matcher.matches();
 	    }
+	   /*
+		 * Method to check rule one minimum 8
+		 *Characters - NOTE – All rules must
+		 */
+		public boolean passwordRule1(String password) {
+			String regex = "^[0-9a-zA-Z]{8,}$";
+			Pattern pattern = Pattern.compile(regex);
+			Matcher matcher = pattern.matcher(password);
+			return matcher.matches();
+		}
 
 }
