@@ -100,4 +100,7 @@ public class UserRegistration {
 	        Matcher matcher = pattern.matcher(emailId);
 	        return matcher.matches();
 	    }
+	  
+	  
 }
+
